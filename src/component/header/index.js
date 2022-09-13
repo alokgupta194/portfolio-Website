@@ -7,9 +7,9 @@ export default function Header() {
       <header>
         <nav class="navbar navbar-expand-lg  navbar-dark ">
           <div class="container-fluid">
-            <a class="navbar-brand me-auto" href="#">
+            <Link class="navbar-brand me-auto" to="/">
               Alok Gupta
-            </a>
+            </Link>
             <button
               class="navbar-toggler"
               type="button"

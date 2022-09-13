@@ -10,15 +10,15 @@ export default function Home() {
             currently I am Working in INADEV as GRADUATE TRAINEE ENGINEER.
           </h6>
           <br></br>
-          <h6 id="text"></h6>
+          {/* <h6 id="text"></h6> */}
           <br></br>
-          <h6 id="text"></h6>
+          {/* <h6 id="text"></h6> */}
           <br></br>
-          <h6 id="text"></h6>
+          {/* <h6 id="text"></h6> */}
           <br></br>
-          <h6 id="text"></h6>
+          {/* <h6 id="text"></h6> */}
           <br></br>
-          <h6 id="text"></h6>
+          {/* <h6 id="text"></h6> */}
           <br></br>
         </div>
       </div>
