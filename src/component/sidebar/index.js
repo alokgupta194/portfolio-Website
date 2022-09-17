@@ -3,6 +3,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
+
 import "../sidebar/style.scss";
 
 export default function Sidebar() {
@@ -17,6 +18,7 @@ export default function Sidebar() {
     Query: "",
   });
 
+ 
   const handleSubmit = (synthethicEvent) => {
     synthethicEvent.preventDefault();
 
@@ -44,20 +46,21 @@ export default function Sidebar() {
     if (validate) {
       toast("Please Fill All Fields");
       return;
+    } else {
+      setTimeout(() => {
+        toast("thanks for Connecting us ");
+        setFullName("");
+        setemail("");
+        setPhone("");
+        setQuery("");
+        setError({
+          fullName: "",
+          email: "",
+          phone: "",
+          Query: "",
+        });
+      }, 2000);
     }
-    setTimeout(() => {
-      toast("thanks for Connecting us ");
-      setFullName("");
-      setemail("");
-      setPhone("");
-      setQuery("");
-      setError({
-        fullName: "",
-        email: "",
-        phone: "",
-        Query: "",
-      });
-    }, 2000);
   };
 
   return (
@@ -131,7 +134,12 @@ export default function Sidebar() {
             helperText={error.Query ? error.Query : ""}
           />
           <div>
-            <Button id="button" type="submit" variant="contained">
+            <Button
+              className="button m-2"
+              id="button"
+              type="submit"
+              variant="contained"
+            >
               Submit
             </Button>
           </div>

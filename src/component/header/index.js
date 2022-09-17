@@ -23,22 +23,22 @@ export default function Header() {
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+                <li class="nav-item" id="navItem">
                   <Link class="nav-link active" aria-current="page" to="/">
                     Home
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="navItem">
                   <Link class="nav-link" to="/about">
                     About
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="navItem">
                   <Link class="nav-link" to="/contact">
                     Contact Me
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" >
                   <Link class="nav-link" to="/details">
                     Experience
                   </Link>
@@ -49,7 +49,7 @@ export default function Header() {
         </nav>
       </header>
       <div className="typical">
-          <h4 className="text" style={{"text-align": "center"}}>
+          <h4 className="text" style={{"text-align": "center","color":"#fb8500"}}>
           Hello, I am
             <Typical
               steps={[
