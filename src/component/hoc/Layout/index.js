@@ -3,25 +3,28 @@ import "./style.scss";
 import Header from "../../header";
 import Footer from "../../footer";
 import Sidebar from "../../sidebar";
-import { BrowserRouter as Router } from "react-router-dom";
 
-export default function Layout({children}) {
+export default function Layout({ children, hideImage = false  ,pageName="home"}) {
   return (
-    <Router>
     <div className="layout-wrapper">
-      <Header />
-      <div className="container ">
+      <Header pageName={pageName}/>
+      <div className="container">
         <div className="row">
-          <div className="col-8 pe-5">
-            {children}
-          </div>
-          <div className="col-4 " id="text">
-            <Sidebar />
+          <div className={`${hideImage ? "col-md-12" : "col-md-9"}`}>{children}</div>
+          <div className="col-md-3 ">
+            {hideImage ? 
+              <Sidebar />              
+             : 
+             <img
+                src={require("../../../asset/images/alok.png")}
+                alt="myImg"
+                className="myImg"
+              ></img>
+            }
           </div>
         </div>
       </div>
       <Footer />
     </div>
-    </Router>
   );
 }

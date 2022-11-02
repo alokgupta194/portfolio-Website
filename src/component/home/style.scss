@@ -1,9 +1,26 @@
 #background{
-    background: rgba(255,255,255, 0.45);  
+    background: rgba(0,0,0, 0.8); 
+    height: 100%; 
 }
 #text{
-    color: rgb(1, 1, 1);
+    margin-top: 10px;
+    margin-left: 20px;
+    color: rgb(255, 255, 255);
 }
+
 #headingtext{
+    margin-left: 20px;
     text-align: center;
+    color: rgb(243, 137, 0);
+}
+#boldText{
+    margin-top: 10px;
+    margin-left: 20px;
+    display: inline;
+    color: rgb(255, 255, 255);
+}
+.main{
+    
+    display: inline;
+    color:aqua;
 }

@@ -1,23 +1,27 @@
-const nodemailer=require('nodemailer');
-var transport=nodemailer.createTransport({
+import nodemailer from "nodemailer"
+const transport=nodemailer.createTransport({
     service:"gmail",
     auth:{
         user:'alokgupta70007@gmail.com',
-        pass:'1122@@aaAS'
+        pass:'gxoiqpadnezzlvzd'
     }
 });
 
 var mailOptions={
-    from:"alokgupta10007@gmail.com",
+    from:"alokgupta70007@gmail.com",
     to:"alokgupta194@gmail.com",
     subject:"email",
     text:"hello from web",
 };
 
-transport.sendMail(mailOptions,(err)=>{
-    if(err){
-        console.log("failed ",err);
-    }else{
-        console.log("sucess");
-    }
-})
+let sendEmail=()=>{
+    transport.sendMail(mailOptions,(err,info)=>{
+        if(err){
+            console.log("failed ",err);
+        }else{
+            console.log("sucess",info.response);
+        }
+    })
+}
+
+export default sendEmail;

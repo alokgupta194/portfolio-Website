@@ -4,5 +4,24 @@
 }
 
 .navbar{
-    background-color: rgba(0,0,0, 0.3);
+    background-color: rgba(0,0,0, 0.2);
+}
+.dot {
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+    border: 2px solid #fb8500;
+    background-image: url("../../asset/images/alokGoyal.svg");
+    border-radius: 50%;
+    display: inline-block;
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+.resume{
+    color: #fb8500;
+    text-decoration: none;
+    margin: 4px;
+    padding-top: 3px;
+    display: inline-block;
 }

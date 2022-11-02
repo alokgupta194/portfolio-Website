@@ -3,7 +3,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-
+import emailjs from "@emailjs/browser";
 import "../sidebar/style.scss";
 
 export default function Sidebar() {
@@ -18,8 +18,7 @@ export default function Sidebar() {
     Query: "",
   });
 
- 
-  const handleSubmit = (synthethicEvent) => {
+  const handleSubmit = async (synthethicEvent) => {
     synthethicEvent.preventDefault();
 
     let validate = false;
@@ -28,16 +27,9 @@ export default function Sidebar() {
       err.fullName = "Please Enter Full Name";
       validate = true;
     }
-    if (email.trim() === "") {
-      err.email = "Please Enter Email";
-      validate = true;
-    }
+    
     if (phone.trim() === "") {
       err.phone = "Please Enter phone number";
-      validate = true;
-    }
-    if (Query.trim() === "") {
-      err.Query = "Please Enter your Query";
       validate = true;
     }
 
@@ -47,26 +39,47 @@ export default function Sidebar() {
       toast("Please Fill All Fields");
       return;
     } else {
-      setTimeout(() => {
-        toast("thanks for Connecting us ");
-        setFullName("");
-        setemail("");
-        setPhone("");
-        setQuery("");
-        setError({
-          fullName: "",
-          email: "",
-          phone: "",
-          Query: "",
-        });
-      }, 2000);
+      var templateParams = {
+        to_name: "Mr. Alok Gupta",
+        from_name: "Portfolio Website",
+        message: `Dear Sir, you have a email from ${fullName} with following details \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 name : ${fullName} \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 email : ${email} \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 contact number : ${phone} \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0  query : ${Query} `,
+      };
+
+      emailjs
+        .send(
+          "service_9qypjyo",
+          "template_d7b3db4",
+          templateParams,
+          "-aBPnEkSVtiNAjA-0"
+        )
+        .then(
+          function (response) {
+            if (response.status === 200) {
+              toast("We will connect with you very soon, Thanks for connecting")
+              console.log("SUCCESS!", response.status, response.text);
+              setFullName("");
+              setemail("");
+              setPhone("");
+              setQuery("");
+              setError({
+                fullName: "",
+                email: "",
+                phone: "",
+                Query: "",
+              });
+            }
+          },
+          function (error) {
+            console.log("FAILED...", error);
+          }
+        );
     }
   };
 
   return (
     <div className="container" id="backgroundSidebar" onSubmit={handleSubmit}>
       <br></br>
-      <h5 id="textForSidebar">Please Gave Me your details</h5>
+      <h5 id="textForSidebar">Please Share your details</h5>
       <Box
         component="form"
         sx={{
@@ -79,7 +92,7 @@ export default function Sidebar() {
         <div>
           <TextField
             required
-            sx={{ input: { color: "white" } }}
+            sx={{ input: { color: "black" } }}
             id="outlined-required"
             label="Full Name"
             onChange={(event) => {
@@ -91,10 +104,9 @@ export default function Sidebar() {
             helperText={error.fullName ? error.fullName : ""}
           />
           <TextField
-            required
             id="outlined-email-input"
             label="email"
-            sx={{ input: { color: "white" } }}
+            sx={{ input: { color: "black" } }}
             type="email"
             defaultValue="abc@gmail.com"
             onChange={(event) => {
@@ -109,7 +121,7 @@ export default function Sidebar() {
             required
             id="outlined-phone-input"
             label="phone"
-            sx={{ input: { color: "white" } }}
+            sx={{ input: { color: "black" } }}
             type="number"
             onChange={(event) => {
               setPhone(event.target.value);
@@ -120,7 +132,7 @@ export default function Sidebar() {
             helperText={error.phone ? error.phone : ""}
           />
           <TextField
-            sx={{ input: { color: "white" } }}
+            sx={{ input: { color: "black" } }}
             multiline
             id="outlined-query-input"
             label="Please Enter Your Query"
