@@ -48,9 +48,9 @@ export default function Home() {
               <h6 className="innerHeading">Learned Key skills :</h6>
               <h6 id="text">
                 <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
+                  <li>Subject Experts deliver high-quality lessons and self-learning materials in various formats such as lectures, concept notes, assessments, tests & practice questions, etc.</li>
+                  <li>Create data through brainstorming with the team.</li>
+                  <li>Create, update & review supplementary content materials like short notes, assignments, tests, quizzes, Mock test series etc.</li>
                 </ul>
               </h6>
               {/* 3 */}
