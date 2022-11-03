@@ -10,8 +10,8 @@ export default function Layout({ children, hideImage = false  ,pageName="home"})
       <Header pageName={pageName}/>
       <div className="container">
         <div className="row">
-          <div className={`${hideImage ? "col-md-12" : "col-md-9"}`}>{children}</div>
-          <div className="col-md-3 ">
+          <div className="col-sm-9">{children}</div>
+          <div className="col-sm-3 sideBar">
             {hideImage ? 
               <Sidebar />              
              : 
