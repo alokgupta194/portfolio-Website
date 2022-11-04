@@ -34,11 +34,11 @@ export default function Home() {
               :&nbsp;&nbsp;View On Github
             </a>
           </h6>
-          <h6>
+          {/* <h6>
             <a href="tel:+91 8299494576" style={{ "text-decoration": "none" }}>
               Phone &nbsp;: &nbsp;8299494576
             </a>
-          </h6>
+          </h6> */}
         </div>
       </div>
     </div>
