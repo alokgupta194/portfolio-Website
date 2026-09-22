@@ -1,38 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Alok Gupta — Senior Full Stack Engineer specializing in React.js, Node.js, Python, AWS, AI and automation.">
-  <title>Alok Gupta | Senior Full Stack Engineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alok Gupta | Senior Full Stack Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
-    <a href="#home" class="brand">AG<span>.</span></a>
-    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+<header class="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="#home">Alok<span>.</span></a>
+    <button class="menu-toggle">☰</button>
     <nav id="nav">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact" class="nav-cta">Let's Talk</a>
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact" class="nav-button">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main id="app"></main>
+<main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div>
+<div class="availability"><span></span> Available for freelance opportunities</div>
+<h1>Senior Full Stack<br><span>Engineer.</span></h1>
+<p class="hero-lead">I build scalable, reliable and user-focused web applications with React.js, Node.js, Python, AWS, AI and automation.</p>
+<div class="hero-buttons"><a href="#contact" class="btn primary">Let's Work Together →</a><a href="https://www.linkedin.com/in/alok-gupta-024685196" target="_blank" class="btn secondary">View LinkedIn ↗</a></div>
+<div class="hero-meta"><span>📍 Noida, Uttar Pradesh, India</span><span>✉ alok.gupta.fullstack@gmail.com</span></div>
+</div>
+<div class="profile-card">
+<div class="avatar">AG</div><h2>Alok Gupta</h2><p>Senior Software Engineer</p><hr>
+<div class="profile-row"><strong>4.5+</strong><span>Years experience</span></div>
+<div class="profile-row"><strong>20K+</strong><span>Users supported</span></div>
+<div class="profile-row"><strong>5K+</strong><span>Monthly transactions</span></div>
+<a href="mailto:alok.gupta.fullstack@gmail.com" class="card-contact">Get in touch →</a>
+</div>
+</div>
+</section>
 
-  <footer>
-    <div class="footer-inner">
-      <strong>Alok Gupta<span>.</span></strong>
-      <p>Senior Full Stack Engineer</p>
-      <p>© <span id="year"></span> Alok Gupta. All rights reserved.</p>
-    </div>
-  </footer>
+<section class="trust-bar"><div class="container trust-grid"><span>React.js</span><span>Node.js</span><span>Python</span><span>MongoDB</span><span>AWS</span><span>AI & Automation</span></div></section>
 
-  <script src="index.js"></script>
-</body>
-</html>
+<section class="section" id="about"><div class="container two-column">
+<div><p class="eyebrow">01 / About me</p><h2>Engineering products<br>from <span>idea to production.</span></h2></div>
+<div class="section-copy">
+<p>Senior Full Stack Engineer with 4.5+ years of experience building and deploying scalable web applications using React.js, Node.js, Python, and AWS.</p>
+<p>Experienced in end-to-end product development, microservices architecture, secure REST APIs, database optimization, cloud deployment, and CI/CD automation.</p>
+<p>Strong experience in technical ownership, code reviews, mentoring, third-party integrations and cross-functional collaboration.</p>
+<div class="about-highlights"><div><b>01</b> End-to-end development</div><div><b>02</b> Performance optimization</div><div><b>03</b> Cloud & DevOps</div><div><b>04</b> AI & automation</div></div>
+</div></div></section>
+
+<section class="section soft" id="experience"><div class="container">
+<div class="section-head"><div><p class="eyebrow">02 / Experience</p><h2>Professional journey</h2></div><p>Building production systems across social media, aviation and fintech.</p></div>
+<div class="experience-list">
+<article class="experience"><div class="exp-date">Apr 2026 — Sep 2026</div><div class="exp-main"><h3>Senior Software Engineer <span>· Samay AE</span></h3><p class="location">Contract · Remote / UAE</p><div class="chips"><span>React.js</span><span>Node.js</span><span>SQL</span><span>Make.com</span><span>AI</span><span>REST APIs</span></div><ul><li>Built Glyntr from scratch, an AI-powered social media platform using React.js, Node.js, SQL and REST APIs.</li><li>Owned frontend, backend, database design, authentication, payment integration and third-party integrations.</li><li>Integrated AI tools, Make.com and Stripe to automate image generation, content workflows, publishing and payments.</li><li>Integrated Instagram and LinkedIn APIs using OAuth 2.0 for centralized social publishing.</li></ul></div></article>
+<article class="experience"><div class="exp-date">Dec 2025 — Mar 2026</div><div class="exp-main"><h3>Full Stack Developer <span>· AI Crew Solutions</span></h3><p class="location">Hyderabad, Telangana</p><div class="chips"><span>React.js</span><span>Node.js</span><span>MongoDB</span><span>MySQL</span><span>AWS</span><span>Docker</span></div><ul><li>Designed and implemented a microservices-based aviation crew system handling 5K+ monthly roster transactions.</li><li>Optimized backend modules and database workflows, enhancing throughput by 20%.</li><li>Implemented CI/CD pipelines using Docker, Jenkins and GitHub Actions, shortening deployment cycles by 30%.</li><li>Monitored AWS applications using CloudWatch, maintaining 99.8% uptime.</li></ul></div></article>
+<article class="experience"><div class="exp-date">Jun 2022 — Nov 2025</div><div class="exp-main"><h3>Software Engineer <span>· INADEV India</span></h3><p class="location">Noida, Uttar Pradesh</p><div class="chips"><span>React.js</span><span>Node.js</span><span>Python</span><span>MongoDB</span><span>AWS</span></div><ul><li>Built full-stack fintech applications supporting 20K+ users and improved API latency by 25%.</li><li>Engineered secure REST APIs with JWT authentication and RBAC.</li><li>Improved server performance through caching and query optimization, reducing load by 30%.</li><li>Conducted 100+ code reviews and mentored junior developers.</li><li>Integrated third-party financial and logistics APIs.</li></ul></div></article>
+<article class="experience"><div class="exp-date">Dec 2021 — May 2022</div><div class="exp-main"><h3>Software Testing Associate Intern <span>· The Entrepreneurship Network</span></h3><p class="location">Noida, Uttar Pradesh</p><ul><li>Executed 100+ functional and regression test cases.</li><li>Logged and tracked defects using structured reporting.</li><li>Collaborated with developers to improve software reliability.</li></ul></div></article>
+</div></div></section>
+
+<section class="section" id="projects"><div class="container">
+<p class="eyebrow">03 / Featured project</p><div class="project-intro"><div><h2>Glyntr</h2><p>AI-powered social media platform</p></div><span>01</span></div>
+<article class="project-card"><div class="project-preview"><div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span>glyntr.app</span></div><div class="browser-body"><aside></aside><div class="dashboard"><div class="dash-title"></div><div class="dash-cards"><i></i><i></i><i></i></div><div class="dash-content"></div></div></div></div></div>
+<div class="project-details"><p>Built from scratch and deployed as a production application used by multiple users.</p><div class="project-feature"><b>01</b><span>AI-powered image and content generation</span></div><div class="project-feature"><b>02</b><span>Instagram & LinkedIn OAuth 2.0 integration</span></div><div class="project-feature"><b>03</b><span>Make.com automated publishing workflows</span></div><div class="project-feature"><b>04</b><span>Stripe payment integration</span></div><div class="stack-line">React.js · Node.js · SQL · REST APIs · AI · Make.com · Stripe</div></div></article>
+</div></section>
+
+<section class="section soft" id="skills"><div class="container"><div class="section-head"><div><p class="eyebrow">04 / Technical skills</p><h2>My technology stack</h2></div></div>
+<div class="skills">
+<div class="skill"><span>Frontend</span><h3>React.js · TypeScript · Redux</h3><p>Responsive UI · Cross-browser compatibility</p></div>
+<div class="skill"><span>Backend</span><h3>Node.js · Python · FastAPI</h3><p>REST APIs · JWT · RBAC · Microservices</p></div>
+<div class="skill"><span>Database</span><h3>MongoDB · MySQL</h3><p>Indexing · Aggregation · Query optimization</p></div>
+<div class="skill"><span>Cloud & DevOps</span><h3>AWS · Docker · Jenkins</h3><p>EC2 · S3 · Lambda · IAM · GitHub Actions · CI/CD</p></div>
+<div class="skill"><span>AI & Automation</span><h3>AI Tools · Make.com</h3><p>OAuth 2.0 · Third-party APIs · Automation workflows</p></div>
+</div></div></section>
+
+<section class="section"><div class="container education-grid"><div><p class="eyebrow">05 / Education</p><h2>Education & certification</h2></div><div class="edu-item"><span>MCA</span><div><h3>Master of Computer Applications</h3><p>Dr. A.P.J. Abdul Kalam Technical University · 2022</p></div></div><div class="edu-item"><span>AWS</span><div><h3>AWS Certified Cloud Practitioner</h3><p>Cloud fundamentals and AWS services</p></div></div></div></section>
+
+<section class="contact" id="contact"><div class="container contact-inner"><div><p class="eyebrow">06 / Contact</p><h2>Let's build something<br><span>great together.</span></h2><p>Have a product, web application or automation project in mind?</p></div><div class="contact-links"><a href="mailto:alok.gupta.fullstack@gmail.com">✉ <span>alok.gupta.fullstack@gmail.com</span></a><a href="tel:+919935932705">☎ <span>+91 9935932705</span></a><a href="https://www.linkedin.com/in/alok-gupta-024685196" target="_blank">in <span>LinkedIn Profile ↗</span></a></div></div></section>
+</main>
+<footer><div class="container footer-inner"><strong>Alok<span>.</span></strong><span>Senior Full Stack Engineer</span><span>© <b id="year"></b> All rights reserved.</span></div></footer>
+<script src="index.js"></script>
+</body></html>
